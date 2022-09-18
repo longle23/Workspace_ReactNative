@@ -1,109 +1,124 @@
-// import { StatusBar } from 'expo-status-bar';
-// import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {
+  View,
+  Text,
+  ImageBackground,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 
-// export default function App() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>Open up App.js to start working on your app!!</Text>
-//       <StatusBar style="auto" />
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
-
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button, ImageBackground } from 'react-native';
-
-export default function App() {
+function Bai1c(props) {
   return (
-    <View style={styles.container}>
-      <ImageBackground source={require('./img/background.png')} style={styles.image}>
-        <View style={styles.top}>
-          <Image
-            style={styles.logo}
-            source={require('./img/circle.png')} />
+    <ImageBackground source={require('./img/background.png')} style={{ flex: 100 }}>
+      <View style={{ flex: 15, justifyContent: 'center' }}>
+        <Text
+          style={{
+            fontSize: 50,
+            fontWeight: 'bold',
+            alignSelf: 'center',
+          }}>
+          CODE
+        </Text>
+
+        <Text
+          style={{
+            fontSize: 20,
+            marginTop: 20,
+            fontWeight: 'bold',
+            alignSelf: 'center',
+          }}>
+          VERIFICATION
+        </Text>
+      </View>
+
+      <View style={{ flex: 15, justifyContent: 'center' }}>
+        <Text
+          style={{
+            textAlign: 'center',
+            fontWeight: 'bold',
+            alignSelf: 'center',
+          }}>
+          Enter ontime password sent on ++849092605798
+        </Text>
+
+        <View
+          style={{
+            flexDirection: 'row',
+            paddingVertical: 5,
+            marginVertical: 5,
+            justifyContent: 'center',
+          }}>
+          <TouchableOpacity
+            style={{
+              height: 40,
+              width: 40,
+              borderColor: 'black',
+              borderWidth: 1,
+            }} />
+
+          <TouchableOpacity
+            style={{
+              height: 40,
+              width: 40,
+              borderColor: 'black',
+              borderWidth: 1,
+            }} />
+
+          <TouchableOpacity
+            style={{
+              height: 40,
+              width: 40,
+              borderColor: 'black',
+              borderWidth: 1,
+            }} />
+
+          <TouchableOpacity
+            style={{
+              height: 40,
+              width: 40,
+              borderColor: 'black',
+              borderWidth: 1,
+            }} />
+
+          <TouchableOpacity
+            style={{
+              height: 40,
+              width: 40,
+              borderColor: 'black',
+              borderWidth: 1,
+            }} />
+
+          <TouchableOpacity
+            style={{
+              height: 40,
+              width: 40,
+              borderColor: 'black',
+              borderWidth: 1,
+            }} />
         </View>
+      </View>
 
-        <View style={styles.center}>
-          <Text style={styles.text1}>GROW</Text>
+      <View style={{ flex: 15, alignItems: 'center' }}>
+        <TouchableOpacity
+          style={{
+            height: 40,
+            width: 350,
+            justifyContent: 'center',
+            backgroundColor: '#E3C000',
+          }}>
 
-          <Text style={styles.text2}>YOUR BUSINESS</Text>
-
-          <Text style={styles.text3}>We will help you to grow your business using</Text>
-
-          <Text style={styles.text4}>online server</Text>
-        </View>
-
-        <View style={styles.bottom}>
-          <Button style={styles.btn1} title='LOGIN'></Button>
-
-          <Button style={styles.btn2} title='SIGN UP'></Button>
-        </View>
-
-        <Text style={{fontWeight: 'bold', textAlign: 'center', fontSize:20}}>HOW WE WORK?</Text>
-      </ImageBackground>x
-    </View>
+          <Text
+            style={{
+              alignItems: 'center',
+              textAlign: 'center',
+              fontWeight: 'bold',
+            }}>
+            VERIFY CODE
+          </Text>
+        </TouchableOpacity>
+      </View>
+    </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  image: {
-    flex: 1,
-  },
-  logo: {
-    width: 180,
-    height: 180
-  },
-  top: {
-    marginTop: 35,
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  text1: {
-    textAlign: 'center',
-    fontSize: 27,
-    fontWeight: 'bold',
-    marginTop: 30,
-  },
-  text2: {
-    textAlign: 'center',
-    fontSize: 27,
-    fontWeight: 'bold'
-  },
-  text3: {
-    fontsize: 25,
-    marginTop: 40, 
-    textAlign: 'center',
-    fontWeight: 'bold'
-  },
-  text4: {
-    fontsize: 25,
-    textAlign: 'center',
-    fontWeight: 'bold'
-  },
-  bottom: {
-    flex: 1,
-    marginTop: 70,
-  },
-  btn1: {
-    width: 100,
-    height: 50,
-    color: '#E3C000'
-  },
-  btn2: {
-    width: 100,
-    height: 50
-  }
-});
+export default Bai1c;

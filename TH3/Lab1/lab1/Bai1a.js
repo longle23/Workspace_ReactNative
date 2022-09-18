@@ -27,8 +27,8 @@ export default function App() {
           <Button style={styles.btn2} title='SIGN UP'></Button>
         </View>
 
-        <Text style={{fontWeight: 'bold', textAlign: 'center', fontSize:20}}>HOW WE WORK?</Text>
-      </ImageBackground>x
+        <Text style={{ flex:1, fontWeight: 'bold', textAlign: 'center', fontSize: 20}}>HOW WE WORK?</Text>
+      </ImageBackground>
     </View>
   );
 }
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   text3: {
     fontsize: 25,
-    marginTop: 40, 
+    marginTop: 40,
     textAlign: 'center',
     fontWeight: 'bold'
   },
@@ -74,15 +74,20 @@ const styles = StyleSheet.create({
   },
   bottom: {
     flex: 1,
-    marginTop: 70,
+    width: '50%',
+    height: '7%',
+    marginTop: 60,
+    flexDirection: "row",
+    alignItems: "center",
+    alignSelf: "center",
+    justifyContent: "space-between",
   },
   btn1: {
     width: 100,
-    height: 50,
-    color: '#E3C000'
+    height: 20,
   },
   btn2: {
     width: 100,
-    height: 50
+    height: 20
   }
 });

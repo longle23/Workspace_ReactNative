@@ -13,7 +13,7 @@ const actionClick = () => {
   alert('Register success');
 }
 
-const Lab2 = () => {
+const Bai1e = () => {
   // Set mac dinh khong hien password
   const [getPasswordVisible, setPasswordVisible] = useState(false)
 
@@ -65,7 +65,7 @@ const Lab2 = () => {
   );
 };
 
-export default Lab2;
+export default Bai1e;
 
 const styles = StyleSheet.create({
   container: {
