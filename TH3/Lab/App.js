@@ -1,14 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Button, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-
         <View style={styles.header1}>
-          <Image source={require('./img/sachgiaokhoa.png')}></Image>
-
           <Text>Nguyên hàm tích phân và ứng dụng</Text>
 
           <Text>cung cấp bởi Tiki Trading</Text>
@@ -16,7 +19,7 @@ export default function App() {
           <Text style={styles.styleText}>141.800 đ</Text>
         </View>
 
-        <View styles={styles.header2}>
+        <View styles={{ justifyContent: 'space-between' }}>
           <Text>Mã giảm giá đã lưu</Text>
 
           <TouchableOpacity>
@@ -24,42 +27,51 @@ export default function App() {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.header3}>
-          <Text>Mã giảm giá</Text>
+        <View style={{ justifyContent: 'space-between' }}>
+          <View>
+            <Text>Mã giảm giá</Text>
+          </View>
 
-          <button value={Áp u}}></button>
+          <TouchableOpacity>
+            <Text>Áp dụng</Text>
+          </TouchableOpacity>
         </View>
       </View>
 
       <View style={styles.center}>
-        <Text style={styles.textBold}>Bạn có phiếu quà tặng Tiki/Got it/Urbox?</Text>
+        <Text style={{ fontWeight: 'bold' }}>
+          Bạn có phiếu quà tặng Tiki/Got it/Urbox?
+        </Text>
 
-        <Text style={{ color: 'blue' }}>Nhập tại đây?</Text>
+        <TouchableOpacity>
+          <Text style={{ color: 'blue', fontWeight: 'bold' }}>
+            Nhập tại đây?
+          </Text>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.bottom}>
         <View style={styles.tamtinh}>
           <Text style={{ marginRight: 220, fontWeight: 'bold' }}>Tạm tính</Text>
 
-          <Text style={styles.styleText}>141.800 đ</Text>
+          <Text style={{ fontWeight: 'bold', color: 'red' }}>141.800 đ</Text>
         </View>
 
-        <View style={styles.nen}>
-          <Text></Text>
-        </View>
+        <View style={styles.nen}></View>
 
         <View style={styles.thanhtien}>
-          <Text style={{ marginRight: 220, fontWeight: 'bold' }}>Thành tiền </Text>
+          <Text
+            style={{ marginRight: 220, fontWeight: 'bold', color: '#808080' }}>
+            Thành tiền
+          </Text>
 
-          <Text style={styles.styleText}>141.800 đ</Text>
+          <Text style={{ fontWeight: 'bold', color: 'red' }}>141.800 đ</Text>
         </View>
 
-        <TouchableOpacity>
-          <Text>Tiến hành đặt hàng</Text>
+        <TouchableOpacity style={{backgroundColor: '#E53935',width: '95%',height: '15%',justifyContent: 'center'}}>
+          <Textstyle={{ color: 'white', fontWeight: 'bold', textAlign: 'center' }}>Tiến hành đặt hàng</Text>
         </TouchableOpacity>
       </View>
-
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -82,10 +94,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     marginVertical: 20,
-    width: '100%',
-    justifyContent: 'center',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   bottom: {
     flex: 5,
@@ -105,7 +115,7 @@ const styles = StyleSheet.create({
   nen: {
     flex: 2,
     backgroundColor: '#BCB7B6',
-    width: '100%'
+    width: '100%',
   },
   thanhtien: {
     flex: 1,
@@ -114,12 +124,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    display: 'flex'
+    display: 'flex',
   },
   styleText: {
-    color: 'red'
+    color: 'red',
   },
-  textBold: {
-    fontWeight: 'bold',
-  }
 });
