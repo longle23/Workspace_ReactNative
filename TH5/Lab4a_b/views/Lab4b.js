@@ -1,14 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Lab4a from './views/Lab4a';
-import Lab4b from './views/Lab4b';
 
-export default function App() {
+export default function Lab4b() {
   return (
     <View style={styles.container}>
-      <Lab4a/>
-
-      {/* <Lab4b/> */}
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
     </View>
   );
 }
