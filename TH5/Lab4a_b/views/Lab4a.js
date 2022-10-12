@@ -27,6 +27,7 @@ const Lab4a = () => {
           data={data}
           renderItem={ProductItem}
           keyExtractor={(item) => item.id}
+          style={{backgroundColor:'white'}}
         />
 
       </View>
@@ -53,6 +54,7 @@ export default Lab4a;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor:'white',
   },
   header: {
     backgroundColor: "#1BA9FF",
@@ -66,7 +68,7 @@ const styles = StyleSheet.create({
   session: {
     flex: 1,
     paddingLeft: 70,
-    paddingTop: 15
+    paddingTop: 15,
   },
   footer: {
     backgroundColor: "#1BA9FF",

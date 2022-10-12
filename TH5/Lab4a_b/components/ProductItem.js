@@ -9,6 +9,8 @@ const ProductItem = ({ item }) => {
                 justifyContent: "space-between",
                 alignItems: "center",
                 marginHorizontal: 10,
+                marginBottom: 20
+
             }}
         >
             <View style={{ flexDirection: "row" }}>
@@ -22,8 +24,8 @@ const ProductItem = ({ item }) => {
                     <Text style={{ color: "red" }}>Shop: {item.shop}</Text>
                 </View>
 
-                <TouchableOpacity style={{ backgroundColor: 'red', marginLeft:40,justifyContent:'center', width: 90, height: 50 }}>
-                    <Text>Chat</Text>
+                <TouchableOpacity style={{ backgroundColor: 'red', marginLeft: 40, justifyContent: 'center', width: 90, height: 50 }}>
+                    <Text style={{ textAlign: 'center' }}>Chat</Text>
                 </TouchableOpacity>
             </View>
 
