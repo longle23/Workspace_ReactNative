@@ -20,8 +20,11 @@ export default CallMockAPI = () => {
         fetch(
             "https://63477bf70484786c6e8147db.mockapi.io/api/product/Product"
         )
-            .then((response) => {response.json()
-                setLoading(false);})
+            .then((response) => {
+                response.json()
+                setLoading(false)
+                setData(response)
+            })
             .then((json) => console.log(json))
     };
 
@@ -31,7 +34,6 @@ export default CallMockAPI = () => {
             ) : (
                 <FlatList
                     data={data}
-                    keyExtractor={({ id }, index) => id}
                     renderItem={({ item }) => (
                         <Text>
                             {item.id}, {item.name},{item.price}
@@ -39,9 +41,6 @@ export default CallMockAPI = () => {
                     )}
                 />
 
-                // <View>
-                //     <Text>{data.id}, {data.name},{data.price}</Text>
-                // </View>
             )}
         </View>
     );
