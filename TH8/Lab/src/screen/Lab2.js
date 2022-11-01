@@ -41,7 +41,12 @@ const Lab2 = () => {
 
   return (
     <View style={{ height: "100%", justifyContent: "space-between" }}>
-      <Animated.View style={[{ transform: [{ translateX: translateXAni }, { translateY: translateYAni }] }]}>
+      <Animated.View style={[
+        {
+          transform: [{ translateX: translateXAni }, { translateY: translateYAni }]
+        }
+      ]}
+      >
         <Image source={meme} style={{ width: 100, height: 200 }} />
       </Animated.View>
 
@@ -59,8 +64,8 @@ const Lab2 = () => {
   );
 }
 
+export default Lab2;
+
 const styles = StyleSheet.create({
 
 });
-
-export default Lab2;

@@ -32,6 +32,8 @@ const Lab1 = () => {
     );
 }
 
+export default Lab1;
+
 const styles = StyleSheet.create({
     container: {
         alignItems: "center",
@@ -46,5 +48,3 @@ const styles = StyleSheet.create({
         fontSize: 28
     },
 });
-
-export default Lab1;
