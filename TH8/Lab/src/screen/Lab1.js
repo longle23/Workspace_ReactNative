@@ -8,7 +8,8 @@ const Lab1 = () => {
     useEffect(() => {
         Animated.timing(fadeAnim, {
             toValue: 1,
-            duration: 2000
+            duration: 2000,
+            useNativeDriver: true,
         }).start();
         
     }, [])

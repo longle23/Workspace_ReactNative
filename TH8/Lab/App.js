@@ -11,7 +11,7 @@ import Lab7 from './src/screen/Lab7';
 export default function App() {
   return (
     <View>
-      {/* <Lab1 /> */}
+      <Lab1 />
 
       {/* <Lab2 /> */}
 
@@ -21,7 +21,7 @@ export default function App() {
 
       {/* <Lab5/> */}
 
-      <Lab6/>
+      {/* <Lab6/> */}
 
       {/* <Lab7/> */}
     </View>

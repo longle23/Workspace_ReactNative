@@ -1,71 +1,72 @@
-import { Animated, Button, Image, StyleSheet, Text, View } from "react-native";
-import React, { useEffect, useRef } from "react";
-import meme from '../../assets/meme.png'
+import React from 'react';
+import { View, StyleSheet, Animated, Image } from 'react-native';
+import bell from '../../assets/bell.png'
 
-const Cau6 = () => {
+export default class Cau6 extends React.Component {
 
-    const rotate = useRef(new Animated.Value(0)).current;
+    constructor(p) {
+        super(p);
+        this.state = {
+            amin: new Animated.Value(0),
+        };
+    }
 
-    useEffect(() => {
+    componentDidMount() {
         Animated.loop(
-            Animated.sequence(
-                // lac qua phai 45def
-                [
-                    Animated.timing(rotate, {
-                        toValue: 1,
-                        duration: 1000,
-                        useNativeDriver: false,
-                    }),
+            Animated.sequence([
+                Animated.timing(this.state.amin, {
+                    toValue: -1,
+                    duration: 100,
+                    delay: 800,
+                    useNativeDriver: false
+                }),
 
-                    // lac qua trai 90 deg
-                    Animated.timing(rotate, {
-                        toValue: -1,
-                        duration: 1000,
-                        useNativeDriver: false,
-                    }),
+                Animated.timing(this.state.amin, {
+                    toValue: 1,
+                    duration: 100,
+                    useNativeDriver: false
+                }),
 
-                    // lac qua phai 45 deg: 0 ,90 def: 1
-                    Animated.timing(rotate, {
-                        toValue: 0,
-                        duration: 1000,
-                        useNativeDriver: false,
-                    }),
-                ]
-            )
+                Animated.timing(this.state.amin, {
+                    toValue: -1,
+                    duration: 100,
+                    useNativeDriver: false
+                }),
+
+                Animated.timing(this.state.amin, {
+                    toValue: 1,
+                    duration: 100,
+                    useNativeDriver: false
+                }),
+
+                Animated.timing(this.state.amin, {
+                    toValue: 0,
+                    duration: 100,
+                    useNativeDriver: false
+                }),
+            ]),
         ).start();
+    }
 
-    }, []);
+    render = () => {
 
-    const spin = rotate.interpolate({
-        inputRange: [-1, 0, 1],
-        outputRange: ["-45deg", "0deg", "45deg"],
-    });
-    return (
-        <View style={styles.container}>
-            <Animated.View
-                style={[
-                    styles.transition,
-                    {
-                        transform: [{ rotate: spin }],
-                    },
-                ]}
-            >
-                <Image
-                    source={meme}
-                    style={{
-                        width: 100,
-                        height: 200,
-                    }}
-                />
-            </Animated.View>
-        </View>
-    );
-};
+        const rotation = this.state.amin.interpolate({
+            inputRange: [-1, 1],
+            outputRange: ['-10deg', '10deg'],
+        });
 
-export default Cau6;
+        return (
+            <View style={style.container}>
+                <Animated.View style={{ alignSelf: 'center', transform: [{ rotate: rotation }] }}>
+                    <Image source={bell} style={{ width: 200, height: 200 }} />
+                </Animated.View>
+            </View>
+        );
+    };
+}
 
-const styles = StyleSheet.create({
-    transition: {
-        marginBottom: 300,
+const style = StyleSheet.create({
+    container: {
+        height: '100%'
     },
 });
