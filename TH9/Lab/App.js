@@ -7,9 +7,9 @@ import Lab3 from './src/screens/Lab3';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Lab1 />
+      {/* <Lab1 /> */}
 
-      {/* <Lab2 /> */}
+      <Lab2 />
 
       {/* <Lab3 /> */}
     </View>
